@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Side-by-side comparison dashboard of TPSODL and TPWODL services, infrastructure metrics, and exclusive features.">
+    <title>Comparison Dashboard - Odisha Power JVs</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%231a56df%22/><text y=%2270%22 x=%2215%22 font-family=%22sans-serif%22 font-size=%2260%22 fill=%22white%22 font-weight=%22bold%22>OP</text></svg>">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-wrapper">
+                <div class="logo-icon">⚡</div>
+                <div class="logo-text">
+                    <span class="logo-title">OdishaPower</span>
+                    <span class="logo-subtitle">Joint Ventures Comparison</span>
+                </div>
+            </a>
+            
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation">
+                <span class="nav-toggle-icon"></span>
+            </button>
+            
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="tpsodl.html" class="nav-link">TPSODL Info</a>
+                <a href="tpwodl.html" class="nav-link">TPWODL Info</a>
+                <a href="comparison.html" class="nav-link active">Comparison Dashboard</a>
+                <a href="contact.html" class="nav-link">Contact & Support</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Title Header -->
+    <section class="section section-bg" style="padding: 40px 0; background: linear-gradient(135deg, hsl(215, 45%, 15%) 0%, hsl(215, 30%, 25%) 100%); color: white;">
+        <div class="container">
+            <div>
+                <span style="color: var(--secondary); font-weight: 700; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px;">Interactive Panel</span>
+                <h1 style="color: white; font-size: 2.25rem; margin-top: 4px;">Comparison Dashboard</h1>
+                <p style="color: hsl(215, 15%, 80%); margin-top: 8px;">Factual side-by-side analysis of TPSODL and TPWODL features, stats, and operations</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Content Section -->
+    <section class="section">
+        <div class="container">
+            
+            <!-- Interactive Tabs Navigation -->
+            <div class="tabs-nav">
+                <button class="tab-btn active" data-tab="tabAll">All Metrics</button>
+                <button class="tab-btn" data-tab="tabSimilar">Similarities</button>
+                <button class="tab-btn" data-tab="tabDiff">Differences</button>
+                <button class="tab-btn" data-tab="tabExclusive">Exclusive Features</button>
+            </div>
+
+            <!-- Tab 1: All Metrics Table -->
+            <div class="tab-panel active" id="tabAll">
+                <div class="table-wrapper">
+                    <table class="comp-table">
+                        <thead>
+                            <tr>
+                                <th>Category / Metric</th>
+                                <th>TPSODL (Southern)</th>
+                                <th>TPWODL (Western)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- General Profile -->
+                            <tr style="background-color: hsl(215, 20%, 97%); font-weight: 700;">
+                                <td colspan="3" style="padding: 12px 24px; color: var(--primary);">GENERAL PROFILE</td>
+                            </tr>
+                            <tr>
+                                <td class="metric-name">Full Company Name</td>
+                                <td>TP Southern Odisha Distribution Limited</td>
+                                <td>TP Western Odisha Distribution Limited</td>
+                            </tr>
+                            <tr>
+                                <td class="metric-name">Joint Venture Ownership</td>
+                                <td>Tata Power (51%) & Government of Odisha (49%)</td>
+                                <td>Tata Power (51%) & Government of Odisha (49%)</td>
+                            </tr>
+                            <tr>
+                                <td class="metric-name">Geographic Jurisdiction</td>
+                                <td>Southern part of Odisha</td>
+                                <td>Western part of Odisha</td>
+                            </tr>
+                            <tr>
+                                <td class="metric-name">Revenue Districts Covered</td>
+                                <td>8 Districts (Ganjam, Gajapati, Kandhamal, Boudh, Rayagada, Koraput, Nabarangpur, Malkangiri)</td>
+                                <td>9 Districts (Bargarh, Bolangir, Deogarh, Jharsuguda, Kalahandi, Nuapada, Sambalpur, Sonepur, Sundergarh)</td>
+                            </tr>
+                            <tr>
+                                <td class="metric-name">Administrative Setup</td>
+                                <td>
+                                    6 Circles, 19 Divisions, 51 Sub-divisions, 135 Sections
+                                </td>
+                                <td>
+                                    5 Circles, 17 Divisions
+                                </td>
+                            </tr>
+                            
+                            <!-- Operations & Stats -->
+                            <tr style="background-color: hsl(215, 20%, 97%); font-weight: 700;">
+                                <td colspan="3" style="padding: 12px 24px; color: var(--primary);">OPERATIONAL STATISTICS</td>
+                            </tr>
+                            <tr>
+                                <td class="metric-name">Area Covered</td>
+                                <td>48,751 sq. km</td>
+                                <td>48,373 sq. km</td>
+                            </tr>
+                            <tr>
+                                <td class="metric-name">Population Served</td>
+                                <td>~94.38 Lakhs</td>
+                                <td>~88 Lakhs</td>
+                            </tr>
+                            <tr>
+                                <td class="metric-name">Customer Base</td>
+                                <td>~23.69 Lakhs</td>
+                                <td>~21.42 Lakhs (as of 31.03.2021)</td>
+                            </tr>
+                            <tr>
+                                <td class="metric-name">Total Energy Input</td>
+                                <td>4,349.03 MU (FY2023-24)</td>
+                                <td>7,625 MU (as of 31.03.2021)</td>
+                            </tr>
+                            <tr>
+                                <td class="metric-name">AT&C Losses</td>
+                                <td>Target: 32.80% (FY23-24)</td>
+                                <td>27.33% (as of 31.03.2021)</td>
+                            </tr>
+                            <tr>
+                                <td class="metric-name">Grid Lines Capacity</td>
+                                <td>33 kV, 11 kV, LT lines (Exact lengths not aggregated on homepage)</td>
+                                <td>33kV (4,918 Ckm), 11kV (46,766 Ckm), LT (55,286 Ckm)</td>
+                            </tr>
+
+                            <!-- Customer Support & Channels -->
+                            <tr style="background-color: hsl(215, 20%, 97%); font-weight: 700;">
+                                <td colspan="3" style="padding: 12px 24px; color: var(--primary);">CUSTOMER CHANNELS & SUPPORT</td>
+                            </tr>
+                            <tr>
+                                <td class="metric-name">Toll-Free Helpline</td>
+                                <td>1912 / 1800 2026 / 1800 345 6797</td>
+                                <td>1912 / 1800-3456-798</td>
+                            </tr>
+                            <tr>
+                                <td class="metric-name">Customer Care Email</td>
+                                <td>customercare@tpsouthernodisha.com</td>
+                                <td>consumercare@tpwesternodisha.com</td>
+                            </tr>
+                            <tr>
+                                <td class="metric-name">Mobile Customer Helpline</td>
+                                <td>7077000005</td>
+                                <td><span class="status-badge unavailable">Not Available</span></td>
+                            </tr>
+                            <tr>
+                                <td class="metric-name">New Connection Missed Call</td>
+                                <td>7008808888</td>
+                                <td>7411779783</td>
+                            </tr>
+                            <tr>
+                                <td class="metric-name">No Power Supply Missed Call</td>
+                                <td>9777774699</td>
+                                <td><span class="status-badge unavailable">Not Available</span> (Use 1912 / Toll-Free)</td>
+                            </tr>
+                            <tr>
+                                <td class="metric-name">Bribery/Vigilance WhatsApp</td>
+                                <td>97779 77620</td>
+                                <td>9980558855</td>
+                            </tr>
+                            <tr>
+                                <td class="metric-name">Bribery/Vigilance Email</td>
+                                <td>vigilance@tpsouthernodisha.com</td>
+                                <td>vigilance@tpwesternodisha.com</td>
+                            </tr>
+                            <tr>
+                                <td class="metric-name">Power Theft Call / Email</td>
+                                <td>9777097449 / enforcement@tpsouthernodisha.com</td>
+                                <td>9980558855 / vigilance@tpwesternodisha.com</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Tab 2: Similarities -->
+            <div class="tab-panel" id="tabSimilar">
+                <div class="table-wrapper">
+                    <table class="comp-table">
+                        <thead>
+                            <tr>
+                                <th>Similar Aspect</th>
+                                <th>TPSODL Details</th>
+                                <th>TPWODL Details</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="metric-name">JV Corporate Structure</td>
+                                <td>Joint venture of Tata Power (51%) and Govt of Odisha (49%)</td>
+                                <td>Joint venture of Tata Power (51%) and Govt of Odisha (49%)</td>
+                            </tr>
+                            <tr>
+                                <td class="metric-name">Primary Helpline</td>
+                                <td>Toll-free 3-digit helpline <strong>1912</strong> is active 24/7</td>
+                                <td>Toll-free 3-digit helpline <strong>1912</strong> is active 24/7</td>
+                            </tr>
+                            <tr>
+                                <td class="metric-name">Outage Platform</td>
+                                <td>Uses integrated "Kavach" system to report outage plans</td>
+                                <td>Uses integrated "Kavach" system to report outage plans</td>
+                            </tr>
+                            <tr>
+                                <td class="metric-name">Solar Rooftop Integration</td>
+                                <td>Offers domestic net metering and solar rooftop application links</td>
+                                <td>Offers domestic net metering and solar rooftop application links</td>
+                            </tr>
+                            <tr>
+                                <td class="metric-name">Anti-Bribery Reporting</td>
+                                <td>Active WhatsApp line and email to register vigilance/bribery complaints</td>
+                                <td>Active WhatsApp line and email to register vigilance/bribery complaints</td>
+                            </tr>
+                            <tr>
+                                <td class="metric-name">Business Associate Systems</td>
+                                <td>Vendor tenders, BA Pass modules, and Bill Inward Reception Desks</td>
+                                <td>Vendor tenders, BA Pass modules, and Bill Inward Reception Desks</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Tab 3: Differences -->
+            <div class="tab-panel" id="tabDiff">
+                <div class="table-wrapper">
+                    <table class="comp-table">
+                        <thead>
+                            <tr>
+                                <th>Differentiating Metric</th>
+                                <th>TPSODL Details</th>
+                                <th>TPWODL Details</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="metric-name">Territorial Area Size</td>
+                                <td>Covers <strong>48,751 sq. km</strong> of land</td>
+                                <td>Covers <strong>48,373 sq. km</strong> of land</td>
+                            </tr>
+                            <tr>
+                                <td class="metric-name">Revenue Districts</td>
+                                <td>Administers <strong>8 districts</strong> (primarily southern Ganjam, Koraput etc.)</td>
+                                <td>Administers <strong>9 districts</strong> (primarily western Sambalpur, Rourkela etc.)</td>
+                            </tr>
+                            <tr>
+                                <td class="metric-name">Customer Base size</td>
+                                <td>Serves approximately <strong>23.69 lakh</strong> customers</td>
+                                <td>Serves approximately <strong>21.42 lakh</strong> customers (as of 31.03.2021)</td>
+                            </tr>
+                            <tr>
+                                <td class="metric-name">Population Served</td>
+                                <td>Serves <strong>~94.38 lakhs</strong> citizens</td>
+                                <td>Serves <strong>~88 lakhs</strong> citizens</td>
+                            </tr>
+                            <tr>
+                                <td class="metric-name">Circles & Divisions</td>
+                                <td>Divided into <strong>6 Circles</strong> and <strong>19 Divisions</strong></td>
+                                <td>Divided into <strong>5 Circles</strong> and <strong>17 Divisions</strong></td>
+                            </tr>
+                            <tr>
+                                <td class="metric-name">Technical Loss Metric</td>
+                                <td>Target AT&C Loss of <strong>32.80%</strong> for FY2023-24</td>
+                                <td>AT&C Loss of <strong>27.33%</strong> as on 31.03.2021</td>
+                            </tr>
+                            <tr>
+                                <td class="metric-name">Energy Input Volume</td>
+                                <td>4,349.03 MU energy input for FY2023-24</td>
+                                <td>7,625 MU energy input as of 31.03.2021</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Tab 4: Exclusive Features -->
+            <div class="tab-panel" id="tabExclusive">
+                <div class="features-grid">
+                    <!-- TPSODL Exclusives -->
+                    <div class="feature-list-card sodl-ex">
+                        <div class="features-column-header">
+                            <span class="badge-sodl">TPSODL Exclusive Features</span>
+                        </div>
+                        
+                        <div class="exclusive-item">
+                            <div class="exclusive-icon">📱</div>
+                            <div>
+                                <h4 class="exclusive-title">Mobile Customer Care Support</h4>
+                                <p class="exclusive-desc">Provides a direct mobile hotline (<strong>7077000005</strong>) for calling customer service officers.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="exclusive-item">
+                            <div class="exclusive-icon">⚡</div>
+                            <div>
+                                <h4 class="exclusive-title">No Power Missed Call Helpline</h4>
+                                <p class="exclusive-desc">Allows consumers to report localized power outages by leaving a missed call at <strong>9777774699</strong>.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="exclusive-item">
+                            <div class="exclusive-icon">🚜</div>
+                            <div>
+                                <h4 class="exclusive-title">PM KUSUM-C Implementation Scheme</h4>
+                                <p class="exclusive-desc">Specific farmer portal resources for agricultural pump solarization subsidies up to 7.5 HP (30% MNRE, 30% State, 40% farmer layout).</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TPWODL Exclusives -->
+                    <div class="feature-list-card wodl-ex">
+                        <div class="features-column-header">
+                            <span class="badge-wodl">TPWODL Exclusive Features</span>
+                        </div>
+                        
+                        <div class="exclusive-item">
+                            <div class="exclusive-icon">📊</div>
+                            <div>
+                                <h4 class="exclusive-title">Tripping Application (Vishleshan)</h4>
+                                <p class="exclusive-desc">Dedicated analytics application (vishleshan.tpwesternodisha.com) to analyze line tripping outages.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="exclusive-item">
+                            <div class="exclusive-icon">🗺️</div>
+                            <div>
+                                <h4 class="exclusive-title">Web GIS System</h4>
+                                <p class="exclusive-desc">Active Web Geographic Information System (gis-tpwodl.tpwesternodisha.com) mapping regional electrical assets online.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="exclusive-item">
+                            <div class="exclusive-icon">📝</div>
+                            <div>
+                                <h4 class="exclusive-title">Unclaimed Security Deposit Form</h4>
+                                <p class="exclusive-desc">Online application form module for security deposit retrieval for permanently disconnected (PD) consumers.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="exclusive-item">
+                            <div class="exclusive-icon">📜</div>
+                            <div>
+                                <h4 class="exclusive-title">Consumer Charter (Multilingual)</h4>
+                                <p class="exclusive-desc">Formal consumer charter files translated and hosted in English, Hindi, and Odia languages.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="exclusive-item">
+                            <div class="exclusive-icon">💳</div>
+                            <div>
+                                <h4 class="exclusive-title">Prepaid Smart Meter Recharge Link</h4>
+                                <p class="exclusive-desc">Integrated payment gateway recharge panel for prepaid smart meters.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h4>⚡ OdishaPower</h4>
+                <p class="footer-desc">
+                    A consolidated, factual repository representing the joint venture distribution companies operating under the partnership of Tata Power and Government of Odisha.
+                </p>
+            </div>
+            <div>
+                <h5 class="footer-title">Quick Navigation</h5>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home Page</a></li>
+                    <li><a href="tpsodl.html">TPSODL Details</a></li>
+                    <li><a href="tpwodl.html">TPWODL Details</a></li>
+                    <li><a href="comparison.html">Comparison Dashboard</a></li>
+                    <li><a href="contact.html">Contact & Directories</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="footer-title">Information Authenticity</h5>
+                <p class="footer-desc" style="font-size: 0.85rem;">
+                    Every piece of data, service profile, and helpline listing on this website is mapped directly to the original web pages of TPSODL and TPWODL. No fictional parameters are present.
+                </p>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <span class="footer-copy">© Copyright 2026. Consolidator Web App. All Rights Reserved.</span>
+            <div class="footer-bottom-links">
+                <a href="https://www.tpsouthernodisha.com" target="_blank" rel="noopener">TPSODL Source</a>
+                <a href="https://www.tpwesternodisha.com" target="_blank" rel="noopener">TPWODL Source</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
